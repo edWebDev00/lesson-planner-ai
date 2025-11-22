@@ -56,7 +56,16 @@ const suggestionMap = {
     }
   ]
 };
+// Determine suggestions based on user theme input
+let userKeyword = theme.toLowerCase().trim(); // what the user typed
+let mockSuggestions = suggestionMap[userKeyword] || suggestionMap["default"];
 
+// Add the skill and level info from user input
+mockSuggestions = mockSuggestions.map(s => ({
+  ...s,
+  skill: skill,
+  level: level
+}));
 
   // Display suggestions dynamically
   mockSuggestions.forEach((suggestion, index) => {
