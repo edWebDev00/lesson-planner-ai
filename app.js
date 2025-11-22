@@ -17,29 +17,46 @@ lessonForm.addEventListener("submit", function(event) {
   suggestionsSection.innerHTML = "";
 
   // Generate mock suggestions (hard-coded for now)
-  const mockSuggestions = [
+  // Mapping keywords to lesson suggestions
+const suggestionMap = {
+  "simple past": [
     {
       theme: "Your Last Vacation",
       grammar: "Simple Past",
-      skill: skill,
-      activity: "Partner interview about holidays",
-      level: level
+      activity: "Partner interview about holidays"
     },
     {
       theme: "Childhood Memories",
       grammar: "Past Simple & Past Continuous",
-      skill: skill,
-      activity: "Storytelling in pairs",
-      level: level
+      activity: "Storytelling in pairs"
+    }
+  ],
+  "superpowers": [
+    {
+      theme: "Superhero Interview",
+      grammar: "Second Conditional",
+      activity: "Role-play: I wish I could..."
     },
     {
-      theme: "Famous People’s Early Life",
-      grammar: "Simple Past",
-      skill: skill,
-      activity: "Reading + discussion",
-      level: level
+      theme: "Create Your Hero",
+      grammar: "Second Conditional",
+      activity: "Writing: My superhero origin story"
     }
-  ];
+  ],
+  "default": [
+    {
+      theme: "Daily Routine",
+      grammar: "Present Simple",
+      activity: "Describe your day to a partner"
+    },
+    {
+      theme: "Travel Plans",
+      grammar: "Future Simple",
+      activity: "Plan a trip and discuss"
+    }
+  ]
+};
+
 
   // Display suggestions dynamically
   mockSuggestions.forEach((suggestion, index) => {
