@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson Planner AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Lesson Planner AI</h1>
+  </header>
+
+  <main>
+    <form id="lessonForm">
+      <!-- Level -->
+      <label for="level">Student Level:</label>
+      <select id="level" name="level">
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="B1">B1</option>
+        <option value="B2">B2</option>
+      </select>
+
+      <!-- Theme / Keyword -->
+      <label for="theme">Lesson Theme / Keyword:</label>
+      <input type="text" id="theme" name="theme" placeholder="e.g. job interview">
+
+      <!-- Skill Focus -->
+      <label for="skill">Skill Focus:</label>
+      <select id="skill" name="skill">
+        <option value="speaking">Speaking</option>
+        <option value="listening">Listening</option>
+        <option value="reading">Reading</option>
+        <option value="writing">Writing</option>
+        <option value="speaking-listening">Speaking + Listening</option>
+        <option value="reading-writing">Reading + Writing</option>
+        <option value="all">All Skills</option>
+      </select>
+
+      <!-- Lesson Duration -->
+      <label for="duration">Lesson Duration:</label>
+      <select id="duration" name="duration">
+        <option value="45">45 min</option>
+        <option value="60">60 min</option>
+        <option value="90">90 min</option>
+      </select>
+
+      <!-- Objectives -->
+      <label for="objectives">Objectives:</label>
+      <input type="text" id="objectives" name="objectives" placeholder="e.g. use simple past to describe holidays">
+
+      <button type="submit">Generate Suggestions</button>
+    </form>
+
+    <section id="suggestions">
+      <!-- Here we will show mock lesson suggestions -->
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
